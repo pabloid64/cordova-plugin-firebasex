@@ -257,15 +257,15 @@ public class FirebasePluginMessagingService extends FirebaseMessagingService {
                     .setAutoCancel(true)
                     .setContentIntent(pendingIntent);
 
-            if(bodyHtml != null) {
+            // if(bodyHtml != null) {
                 notificationBuilder
                     .setContentText(fromHtml(body))
                     .setStyle(new NotificationCompat.BigTextStyle().bigText(fromHtml(body)));
-            }else{
-                notificationBuilder
-                    .setContentText(body)
-                    .setStyle(new NotificationCompat.BigTextStyle().bigText(body));
-            }
+            // }else{
+            //     notificationBuilder
+            //         .setContentText(body)
+            //         .setStyle(new NotificationCompat.BigTextStyle().bigText(body));
+            // }
 
 
             // On Android O+ the sound/lights/vibration are determined by the channel ID
